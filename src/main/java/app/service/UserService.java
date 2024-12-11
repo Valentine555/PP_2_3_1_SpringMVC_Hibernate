@@ -2,6 +2,7 @@ package app.service;
 
 
 import app.dao.UserDao;
+import app.dao.UserDaoInt;
 import app.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,12 +12,12 @@ import java.util.List;
 
 @Service
 @Transactional
-public class UserService {
+public class UserService implements UserServiceInt {
 
-    private final UserDao userDao;
+    private final UserDaoInt userDao;
 
     @Autowired
-    public UserService(UserDao userDao) {
+    public UserService(UserDaoInt userDao) {
         this.userDao = userDao;
     }
 

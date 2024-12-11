@@ -2,6 +2,7 @@ package app.controller;
 
 import app.model.User;
 import app.service.UserService;
+import app.service.UserServiceInt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -12,10 +13,10 @@ import java.util.List;
 @Controller
 @RequestMapping("/users")
 public class UserController {
-private final UserService userService;
+private final UserServiceInt userService;
 
 @Autowired
-    public UserController(UserService userService) {
+    public UserController(UserServiceInt userService) {
         this.userService = userService;
     }
 

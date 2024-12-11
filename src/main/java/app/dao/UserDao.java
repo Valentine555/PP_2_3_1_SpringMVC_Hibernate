@@ -4,13 +4,12 @@ package app.dao;
 import app.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public class UserDao {
+public class UserDao implements UserDaoInt {
 
     @PersistenceContext
     private EntityManager entityManager;
